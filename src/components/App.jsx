@@ -1,16 +1,21 @@
+import { Section } from './Section/Section';
+import { PhoneBook } from './PhoneBookForm/PhoneBookForm';
+import { ContactsList } from './Contacts/ContactsList';
+import { Filter } from './Filter/Filter';
+import { GlobalStyles } from './GlobalStyles.styled';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <Section title="Phone book">
+        <PhoneBook />
+      </Section>
+      <Section title="Contacts">
+        <Filter />
+        <ContactsList />
+      </Section>
+
+      <GlobalStyles />
+    </>
   );
 };
